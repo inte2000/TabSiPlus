@@ -1,0 +1,124 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\Common\product.h"
+#include "Module.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MESSAGEBOX_CAPTION  "Source Insight TabSi Extension"
+    IDS_REQUIRE_NT          "Source Insight TabSi Extension 仅支持Windows NT/2000/XP+!"
+    IDS_GETMODULEFILNAME_ERROR "函数GetModuleFileName()调用失败"
+    IDS_COMMANDLINE_HELP    "命令行用法:\n\tTabSiHook.exe\t- 启动 Source Insight TabSi Extension\n\tTabSiHook.exe /?\t- 显示帮助\n\tTabSiHook.exe /u\t- 中止Source Insight TabSi Extension\n\tTabSiHook.exe /r\t- 重新启动Source Insight TabSi Extension"
+    IDS_SOFTVERNAME         "TabSi Plus For Source Insight 3.x"
+    IDS_COPYRIGHT           "Inte2000 (C) 版权所有 2006"
+    IDS_WEBURL              "http://blog.csdn.net/orbit/"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\Common\\product.h""\r\n"
+    "#include ""Module.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#include ""..\\Common\\VerInfo.ver""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN_ICON           ICON                    "res\\TabSiHost.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MESSAGEBOX_CAPTION  "Source Insight Extension"
+    IDS_REQUIRE_NT          "Source Insight Extension can be run only on Windows NT/2000/XP+!"
+    IDS_GETMODULEFILNAME_ERROR "Function GetModuleFileName() failed"
+    IDS_COMMANDLINE_HELP    "Command line usage:\n\tTabSiHook.exe\t- start Source Insight Extension monitor\n\tTabSiHook.exe /?\t- display this help\n\tTabSiHook.exe /u\t- stop Source Insight Extension monitor\n\tTabSiHook.exe /r\t- restart Source Insight Extension monitor"
+    IDS_SOFTVERNAME         "TabSi Plus For Source Insight 3.x"
+    IDS_COPYRIGHT           "Copyright 2006 (C) by Inte2000"
+    IDS_WEBURL              "http://blog.csdn.net/orbit/"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#include "..\Common\VerInfo.ver"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

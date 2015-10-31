@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSupp", "TSupp\TSupp.vcproj", "{D212D9F9-580E-4B8B-BDAA-618959E64110}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TabSiHost", "TabSiHost\TabSiHost.vcproj", "{D6C138AF-1091-4911-A996-4859D4D68487}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TabSiPlus", "TabSiPlus\TabSiPlus.vcproj", "{5204C1F5-50C7-45F7-83BD-6877B5C2377F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Unicode|Win32 = Debug Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release Unicode|Win32 = Release Unicode|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Debug Unicode|Win32.ActiveCfg = Debug|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Debug Unicode|Win32.Build.0 = Debug|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Debug|Win32.Build.0 = Debug|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Release Unicode|Win32.ActiveCfg = Release|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Release Unicode|Win32.Build.0 = Release|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Release|Win32.ActiveCfg = Release|Win32
+		{D212D9F9-580E-4B8B-BDAA-618959E64110}.Release|Win32.Build.0 = Release|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Debug Unicode|Win32.ActiveCfg = Debug Unicode|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Debug Unicode|Win32.Build.0 = Debug Unicode|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Debug|Win32.Build.0 = Debug|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Release Unicode|Win32.ActiveCfg = Release Unicode|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Release|Win32.ActiveCfg = Release|Win32
+		{D6C138AF-1091-4911-A996-4859D4D68487}.Release|Win32.Build.0 = Release|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Debug Unicode|Win32.ActiveCfg = Debug Unicode|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Debug Unicode|Win32.Build.0 = Debug Unicode|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Debug|Win32.Build.0 = Debug|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release Unicode|Win32.ActiveCfg = Release Unicode|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release|Win32.ActiveCfg = Release|Win32
+		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

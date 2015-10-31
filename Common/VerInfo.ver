@@ -1,0 +1,107 @@
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#ifdef RC_INVOKED
+
+#define VERSIONFILEFLAGSMASK    VS_FFI_FILEFLAGSMASK
+
+#ifdef _DEBUG
+#define VERSIONFLAGS    VS_FF_DEBUG
+#else
+#define VERSIONFLAGS    0
+#endif
+
+#ifdef WIN32
+#ifdef WINNT
+#define VERSIONFILEOS    VOS_DOS_WINDOWS32
+#else
+#define VERSIONFILEOS    VOS_NT_WINDOWS32
+#endif
+#else
+#define VERSIONFILEOS    VOS_DOS_WINDOWS16
+#endif
+
+#ifdef _USRDLL
+#define VERSIONTYPE        VFT_DLL
+#else
+#define VERSIONTYPE        VFT_APP
+#endif
+
+#define VERSIONSUBTYPE    VFT2_UNKNOWN
+
+/////////////////////////////////////////////////////////////////////////////
+
+VS_VERSION_INFO VERSIONINFO
+PRODUCTVERSION    APPVERSION, APPREVISION, APPSUBREVISION, APPRELEASE
+FILEVERSION        MODVERSION, MODREVISION, MODSUBREVISION, MODRELEASE
+FILEFLAGSMASK    VERSIONFILEFLAGSMASK
+FILEFLAGS        VERSIONFLAGS
+FILEOS            VERSIONFILEOS
+FILETYPE        VERSIONTYPE
+FILESUBTYPE        VERSIONSUBTYPE
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+    BLOCK "040904B0"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP, 1200 */
+        BEGIN
+            VALUE "Comments",            VERSIONCOMMENTS
+            VALUE "FileDescription",    VERSIONDESCRIPTION
+            VALUE "FileVersion",        VERSIONFILEVERSIONSTR
+            VALUE "InternalName",        VERSIONINTERNALNAME
+            VALUE "LegalCopyright",        VERSIONCOPYRIGHT
+            VALUE "OriginalFilename",    VERSIONORIGINALFILENAME
+            VALUE "ProductName",        VERSIONPRODUCTNAME
+            VALUE "ProductVersion",        VERSIONPRODUCTVERSIONSTR
+        END
+        BLOCK "040904E4"   /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Ansi CP, 1252 */
+        BEGIN
+            VALUE "Comments",            VERSIONCOMMENTS
+            VALUE "FileDescription",    VERSIONDESCRIPTION
+            VALUE "FileVersion",        VERSIONFILEVERSIONSTR
+            VALUE "InternalName",        VERSIONINTERNALNAME
+            VALUE "LegalCopyright",        VERSIONCOPYRIGHT
+            VALUE "OriginalFilename",    VERSIONORIGINALFILENAME
+            VALUE "ProductName",        VERSIONPRODUCTNAME
+            VALUE "ProductVersion",        VERSIONPRODUCTVERSIONSTR
+        END
+#ifdef CHS_RESOURCES
+        BLOCK "080404B0"   /* LANG_CHINESE/SUBLANG_CHINESE_SIMPLIFIED, Unicode CP, 1200 */
+        BEGIN
+            VALUE "Comments",            VERSIONCOMMENTS_CHS
+            VALUE "FileDescription",    VERSIONDESCRIPTION_CHS
+            VALUE "FileVersion",        VERSIONFILEVERSIONSTR_CHS
+            VALUE "InternalName",        VERSIONINTERNALNAME_CHS
+            VALUE "LegalCopyright",        VERSIONCOPYRIGHT_CHS
+            VALUE "OriginalFilename",    VERSIONORIGINALFILENAME_CHS
+            VALUE "ProductName",        VERSIONPRODUCTNAME_CHS
+            VALUE "ProductVersion",        VERSIONPRODUCTVERSIONSTR_CHS
+        END
+        BLOCK "080404B0"   /* LANG_CHINESE/SUBLANG_CHINESE_SIMPLIFIED, Ansi CP, 936 */
+        BEGIN
+            VALUE "Comments",            VERSIONCOMMENTS_CHS
+            VALUE "FileDescription",    VERSIONDESCRIPTION_CHS
+            VALUE "FileVersion",        VERSIONFILEVERSIONSTR_CHS
+            VALUE "InternalName",        VERSIONINTERNALNAME_CHS
+            VALUE "LegalCopyright",        VERSIONCOPYRIGHT_CHS
+            VALUE "OriginalFilename",    VERSIONORIGINALFILENAME_CHS
+            VALUE "ProductName",        VERSIONPRODUCTNAME_CHS
+            VALUE "ProductVersion",        VERSIONPRODUCTVERSIONSTR_CHS
+        END
+#endif
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation"
+#ifdef CHS_RESOURCES
+                , 0x804, 1200, 0x804, 936
+#endif
+                , 0x409, 1200, 0x409, 0x04E4
+    END
+END
+
+#endif //ifdef RC_INVOKED
+
+#endif    // !_MAC

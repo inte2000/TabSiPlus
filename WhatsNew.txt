@@ -1,0 +1,37 @@
+[1749]
+Fixed : 英文版主题ComboBox不是Drop List模式
+Fixed : 设置选项窗口如果选择取消操作后，造成实际状态与配置状态不一致问题
+
+
+[1740]
+Fixed : 修改一处潜在的内存泄露问题
+New   : 使用自定义的tab标签栏控件，支持同名标签分组模式，能更好地配合source insight
+New   : 标签栏控件位置调整所见即所得
+New   : 标签栏字体和大小可自定义
+
+
+[1526]
+Fixed : 中文版本“选择搜索路径”窗口修改一处错别字
+Fixed : 鼠标中键单击“context windows”时出现“sw_child”标签的问题
+Modify: 完全移出基于Microsoft SCC标准的source control机制
+
+
+[1510]
+Fixed : 在某些 Windows XP SP2升级到SP3的系统中指令异常导致Source Insight意外中止
+New   : 在Windows 7系统上测试通过，支持32位和64位Windows 7
+
+
+[1490]
+Fixed : 一般选项对话框中“SIlocation”总是空的问题
+Fixed : 文件切换时已经打开的文件被重新定位到文件开始位置的问题
+New : 添加文件只读属性菜单
+New : 添加系统菜单
+Fixed : 文件没有保存而窗口被关闭的问题
+Fixed : 修改C/C++文件切换搜索目录可以重复添加的问题
+Fixed : 修改搜索目录添加方式，更方便使用
+Fixed : Search Result标签显示错误问题
+Fixed : 修改文件名匹配顺序，CPP/H文件切换速度更快，匹配更准确
+New : 修改搜索路径管理方式，支持递归搜索
+New : 添加Source Control支持，支持多个Provider切换
+
+

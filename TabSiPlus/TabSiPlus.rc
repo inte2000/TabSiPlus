@@ -1,0 +1,736 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FILETYPE            BITMAP                  "res\\FileType.bmp"
+IDB_ABOUT               BITMAP                  "res\\about.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\toolbar.bmp"
+IDB_TOOLBARS            BITMAP                  "res\\toolbarS.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TABSIHOST           ICON                    "res\\TabSiHost.ico"
+IDI_KEYS                ICON                    "res\\196.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURHAND             CURSOR                  "res\\Handcur.cur"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TabSiPlus.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,99,2,1749
+ PRODUCTVERSION 0,99,2,1749
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Source Dynamics 可能不喜欢这个程序"
+            VALUE "CompanyName", "Orbit Studio"
+            VALUE "FileDescription", "TabSiPlus DLL"
+            VALUE "FileVersion", "0, 99, 2, 1749"
+            VALUE "InternalName", "水玉石"
+            VALUE "LegalCopyright", "版权所有 (C) 2012 Orbit Studio"
+            VALUE "OriginalFilename", "TabSiPlus.DLL"
+            VALUE "ProductName", "Source Insight外挂程序"
+            VALUE "ProductVersion", "0, 99, 2, 1749"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAINPLUS MENU 
+BEGIN
+    POPUP "&TabSiPlus"
+    BEGIN
+        MENUITEM "C++/H 文件切换",                  IDC_MAIN_HEADFLIP
+        MENUITEM "选项...",                       IDC_MAIN_OPTION
+        MENUITEM "帮助",                          IDC_MAIN_HELP
+        MENUITEM "技术支持",                        IDC_MAIN_SUPPORT
+        MENUITEM "关闭外挂",                        IDC_MAIN_SHUTDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "关于...",                       IDC_MAIN_ABOUT
+    END
+END
+
+IDR_MENU_TABRIGHT MENU 
+BEGIN
+    POPUP "TabRight"
+    BEGIN
+        MENUITEM "关闭窗口",                        IDC_CLOSE
+        MENUITEM "关闭全部窗口",                      IDC_CLOSEALL
+        MENUITEM "关闭全部其它窗口",                    IDC_CLOSEALLEXCEPT
+        MENUITEM "C++/H 文件切换",                  IDC_HEADERFLIP
+        MENUITEM "选择窗口",                        IDC_SELECT
+        MENUITEM "文件只读属性",                      IDC_SETREADONLY
+        MENUITEM "Source Control",              ID_TABRIGHT_SOURCECONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "属性",                          IDC_PROPERITY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_ABOUT DIALOGEX 0, 0, 221, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ""TabSiPlus"" [1749]"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,85,108,50,14
+    CONTROL         135,IDC_STC_TOPBANNER,"Static",SS_BITMAP | SS_SUNKEN,0,0,221,28
+    LTEXT           "关于",IDC_STATIC,5,33,18,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,31,36,182,1
+    CTEXT           "Source Insight 标签外挂 TabSiPlus 0.99b2",IDC_STATIC,34,44,178,8
+    ICON            IDI_TABSIHOST,IDC_STC_ICON,6,49,20,20
+    CTEXT           "Copyright 2006  Orbit Studio",IDC_STATIC,34,56,178,8
+    CTEXT           "关于“TabSiPlus”的更多信息请访问",IDC_STATIC,34,71,178,8
+    CTEXT           "http://blog.csdn.net/orbit/",IDC_STC_HOMEPAGE,34,82,178,8
+END
+
+IDD_PROPPAGE_FLIP DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "文件切换"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "CPP/H 文件切换搜索路径：",IDC_STATIC,6,4,173,8
+    PUSHBUTTON      "添加...",IDC_BTN_ADDFLPPATH,247,17,31,13
+    PUSHBUTTON      "删除",IDC_BTN_DELFLPPATH,247,39,31,13
+    PUSHBUTTON      "上移",IDC_BTN_UPFLPPATH,247,62,31,13
+    PUSHBUTTON      "下移",IDC_BTN_DOWNFLPPATH,247,85,31,13
+    LTEXT           "CPP/H 自动切换文件类型：",IDC_STATIC,12,126,150,8
+    LTEXT           "Head File Type:",IDC_STATIC,14,140,49,8
+    EDITTEXT        IDC_EDIT_HEADFILE,65,139,193,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Source File Type:",IDC_STATIC,14,155,48,8
+    EDITTEXT        IDC_EDIT_CPPFILE,65,155,193,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST_PATH,4,24,239,81,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    CTEXT           "选择",IDC_STATIC,4,15,23,9,SS_SUNKEN
+    CTEXT           "搜索路径",IDC_STATIC,28,15,215,9,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_FULLSRHPATH,4,109,274,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_PROPPAGE_TABBAR DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "标签栏选项"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "标签栏位置",IDC_STATIC,7,7,115,44
+    CONTROL         "在标签栏显示图标(&I)",IDC_CHK_SHOWICON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,61,108,9
+    CONTROL         "在右键菜单使用系统菜单(&S)",IDC_CHK_SHELLMENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,10,127,9
+    GROUPBOX        "打开新文件",IDC_STATIC,140,96,134,45
+    CONTROL         "添加到标签栏的前面(&P)",IDC_RAD_ADDF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,147,109,121,11
+    CONTROL         "添加到标签栏的后面(&N)",IDC_RAD_ADDB,"Button",BS_AUTORADIOBUTTON,147,123,120,11
+    LTEXT           "(可能会延迟菜单的响应速度)",IDC_STATIC,145,22,115,9
+    CONTROL         "停靠在窗口上方(&T)",IDC_RAD_TOP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,21,98,8
+    CONTROL         "停靠在窗口下方(&B)",IDC_RAD_BOTTOM,"Button",BS_AUTORADIOBUTTON,11,35,102,8
+    LTEXT           "路径搜索深度:",IDC_STATIC,150,51,53,8
+    CONTROL         "启用文件智能定位",IDC_CHK_SMART_LOC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,35,80,10
+    EDITTEXT        IDC_EDIT_SRH_DEEP,211,49,40,13,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "分组显示同名标签(&G)",IDC_CHK_GROUP_SAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,74,108,9
+    LTEXT           "标签颜色主题：",IDC_STATIC,12,106,57,8
+    COMBOBOX        IDC_CMB_THEME,13,119,109,65,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "标签栏显示关闭按钮(&A)",IDC_CHK_SHOW_CLOSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,87,108,9
+END
+
+IDD_PROPPAGE_GENERAL DIALOG  0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "一般设置"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "启动Windows时加载TabsiHost外挂程序(&R)",IDC_CHK_AUTORUN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,164,10
+    CONTROL         "启动外挂程序时显示Splash窗口(&W)",IDC_CHK_SHOESPLASH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,21,140,10
+    CONTROL         "启用Smart Flip技术(&F)",IDC_CHK_SMARTFLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,100,10
+    CONTROL         "只在第一个Source Insight实例使用外挂(&O)",IDC_CHK_ONLYONCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,172,10
+    LTEXT           "Source Insight程序位置 :",IDC_STATIC,7,63,97,8
+    EDITTEXT        IDC_EDIT_SILOCATION,7,77,267,13,ES_AUTOHSCROLL
+    GROUPBOX        "定制菜单颜色",IDC_STATIC,7,99,267,65
+    PUSHBUTTON      "菜单文字颜色",IDC_COLORPICKER_MENUTEXT,24,113,84,14
+    PUSHBUTTON      "菜单背景颜色",IDC_COLORPICKER_MENUBKGND,24,130,84,14
+    PUSHBUTTON      "菜单左侧颜色",IDC_COLORPICKER_MENULEFT,24,147,84,14
+    PUSHBUTTON      "菜单文字激活颜色",IDC_COLORPICKER_MENUTEXTHI,169,113,84,14
+    PUSHBUTTON      "菜单背景激活颜色",IDC_COLORPICKER_MENUBKGNDHI,169,130,84,14
+    PUSHBUTTON      "菜单焦点选框颜色",IDC_COLORPICKER_MENUFRAME,169,147,84,14
+END
+
+IDD_SELECT_FOLDER_DLG DIALOGEX 0, 0, 276, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择搜索路径"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FOLDER,7,18,244,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "...",IDC_BTN_BOWRSE,253,17,18,14
+    DEFPUSHBUTTON   "确定",IDOK,86,64,50,14
+    PUSHBUTTON      "取消",IDCANCEL,138,64,50,14
+    CONTROL         "包含所有子文件夹 (&I)",IDC_CHK_INCLUDE_SUBFOLDER,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,39,99,10
+END
+
+IDD_ADD_DLG DIALOGEX 0, 0, 273, 167
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Files to Source Control"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_COMMENT,5,46,209,60,ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "高级...",IDC_BTN_ADV,219,47,50,14
+    CONTROL         "Checkout After Adding to Source Control (&A)",IDC_CHK_ADD_CHKOUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,109,188,10
+    CONTROL         "Text File (&T)",IDC_CHK_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,122,68,10
+    DEFPUSHBUTTON   "确定",IDOK,85,145,50,14
+    PUSHBUTTON      "取消",IDCANCEL,137,145,50,14
+    LTEXT           "文件位置：",IDC_STATIC,5,6,41,8
+    LTEXT           "注释：",IDC_STATIC,5,35,25,8
+    EDITTEXT        IDC_STC_FILE_NAME,5,17,264,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_CHECKIN_DLG DIALOGEX 0, 0, 273, 155
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check In Files"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,85,133,50,14
+    PUSHBUTTON      "取消",IDCANCEL,137,133,50,14
+    LTEXT           "文件位置：",IDC_STATIC,5,6,41,8
+    LTEXT           "注释：",IDC_STATIC,5,36,25,8
+    EDITTEXT        IDC_EDIT_COMMENT,5,47,211,61,ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "高级...",IDC_BTN_ADV,220,48,50,14
+    CONTROL         "Keep Checkout (&K)",IDC_CHK_KEEP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,112,84,10
+    EDITTEXT        IDC_STC_FILE_NAME,5,17,264,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_CHECKOUT_DLG DIALOGEX 0, 0, 273, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check Out Files"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,85,119,50,14
+    PUSHBUTTON      "取消",IDCANCEL,137,119,50,14
+    LTEXT           "文件位置：",IDC_STATIC,5,6,41,8
+    LTEXT           "注释：",IDC_STATIC,5,36,25,8
+    EDITTEXT        IDC_EDIT_COMMENT,5,47,210,61,ES_MULTILINE | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "高级...",IDC_BTN_ADV,219,48,50,14
+    EDITTEXT        IDC_STC_FILE_NAME,5,19,264,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROPPAGE_FLIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 278
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_PROPPAGE_TABBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_PROPPAGE_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_SELECT_FOLDER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TECH_SUPPORT        "http://blog.csdn.net/orbit/"
+    IDS_FAIL_OPEN_HELP      "无法打开本地帮助文件！"
+    IDS_OPTION_SHEET_TITLE  "选项设置"
+    IDS_COLORPICKER_DEFAULT_TEXT "默认"
+    IDS_COLORPICKER_CUSTOM_TEXT "更多颜色"
+    IDS_UNSAVED_TT          "(新文档)"
+    IDS_SIWIN_TT            "Docking Source Insight Window"
+    IDS_MENU_TT             "Source Insight TabSiPlus"
+    IDS_HELP_FILE_NAME      "help.htm"
+    IDS_DEFAULT_FLIP_PATH   "<切换文件所在的目录>"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ADD_FLIP_PATH       "添加 C++/H 文件切换搜索路径"
+    IDS_TOO_MUCH_FLIP_PATH  "当前搜索路径太多(多于64个), 请删除一些不再使用的搜索路径.\r\n(搜索路径太多会减慢搜索速度)"
+    IDS_TOOLBAR_TT          "在C/CPP/H文件之间切换"
+    IDS_INTERNAL_ERROR      "发生内部错误，TabSi 文件标签外挂将被关闭！"
+    IDS_TIME_EXPIRED        "这个软件的使用期限已过，请到\r\nHttp://blog.csdn.net/orbit/\r\n下载新的延长时间限制的版本。\r\n\r\n为什么要设置时间限制？\r\n这是一个违反了软件保护相关法律的外挂程序，它侵犯了“Source Insight”软件的完整权，在Source Dynamic公司开始抱怨之前，我不知道这个程序能够使用多长时间，为了将法律责任降到最小程度，所以做了时间限制。"
+    IDS_FOLDER_ACCESS_ERROR "目录访问错误，不存在或者没有权限！"
+    IDS_NO_SCC_PROVIDER     "从系统中检索Source Control Provider信息出错，请检查系统中是否正确安装Source Control软件！"
+    IDS_SELECT_WORKING_BASE "选择工作代码目录"
+    IDS_NEED_PRJPATH        "请指定当前项目的代码根目录，例如Clear Case中某个View下的目录"
+    IDS_NEED_PRJNAME        "请指定项目名称"
+    IDS_NEED_USERNAME       "请指定用于Source Control Server登陆的用户名"
+    IDS_NEED_PASSWORD       "请指定登陆Source Control Server的密码"
+    IDS_SCC_INIT_ERROR      "Source Control 初始化错误，请确认用户名、密码以及项目信息是否正确！"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,99,2,1749
+ PRODUCTVERSION 0,99,2,1749
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Source Dynamics may hate this program"
+            VALUE "CompanyName", "Orbit Studio"
+            VALUE "FileDescription", "TabSiPlus DLL"
+            VALUE "FileVersion", "0, 99, 2, 1749"
+            VALUE "InternalName", "carnelian"
+            VALUE "LegalCopyright", "Copyright (C) 2006 Orbit Studio"
+            VALUE "OriginalFilename", "TabSiPlus.DLL"
+            VALUE "ProductName", "TabSiPlus for Source Insight"
+            VALUE "ProductVersion", "0, 99, 2, 1749"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TABRIGHT MENU 
+BEGIN
+    POPUP "TabRight"
+    BEGIN
+        MENUITEM "Close",                       IDC_CLOSE
+        MENUITEM "Close All",                   IDC_CLOSEALL
+        MENUITEM "Close All Except",            IDC_CLOSEALLEXCEPT
+        MENUITEM "File Flip",                   IDC_HEADERFLIP
+        MENUITEM "Select",                      IDC_SELECT
+        MENUITEM "Read Only Attribute",         IDC_SETREADONLY
+        MENUITEM "Source Control",              65535
+        MENUITEM SEPARATOR
+        MENUITEM "Property",                    IDC_PROPERITY
+    END
+END
+
+IDR_MENU_MAINPLUS MENU 
+BEGIN
+    POPUP "&TabSiPlus"
+    BEGIN
+        MENUITEM "C++/H Flip",                  IDC_MAIN_HEADFLIP
+        MENUITEM "Option...",                   IDC_MAIN_OPTION
+        MENUITEM "Help",                        IDC_MAIN_HELP
+        MENUITEM "Technical Support",           IDC_MAIN_SUPPORT
+        MENUITEM "ShutDown Plus",               IDC_MAIN_SHUTDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       IDC_MAIN_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_ABOUT DIALOGEX 0, 0, 221, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ""TabSiPlus"" [1749]"
+FONT 8, "Tahoma", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK(&O)",IDOK,85,102,50,14
+    CONTROL         135,IDC_STC_TOPBANNER,"Static",SS_BITMAP | SS_SUNKEN,0,0,221,26
+    LTEXT           "About",IDC_STATIC,5,35,18,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,31,38,182,1
+    CTEXT           "Source Insight PlusIn TabSiPlus 0.99b2",IDC_STATIC,40,46,170,8
+    ICON            IDI_TABSIHOST,IDC_STC_ICON,6,51,20,20
+    CTEXT           "Copyright 2006  Orbit Studio",IDC_STATIC,40,58,170,8
+    CTEXT           "More information On Internet : ",IDC_STATIC,40,72,170,8
+    CTEXT           "http://blog.csdn.net/orbit/",IDC_STC_HOMEPAGE,40,83,170,8
+END
+
+IDD_PROPPAGE_FLIP DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "File Flip"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    LTEXT           "CPP/H Flip Searching Path :",IDC_STATIC,6,4,173,8
+    PUSHBUTTON      "Add...",IDC_BTN_ADDFLPPATH,247,17,31,13
+    PUSHBUTTON      "Remove",IDC_BTN_DELFLPPATH,247,39,31,13
+    PUSHBUTTON      "Up",IDC_BTN_UPFLPPATH,247,62,31,13
+    PUSHBUTTON      "Down",IDC_BTN_DOWNFLPPATH,247,85,31,13
+    LTEXT           "CPP/H Auto Flip File Types :",IDC_STATIC,12,126,150,8
+    LTEXT           "Head File Type:",IDC_STATIC,14,140,49,8
+    EDITTEXT        IDC_EDIT_HEADFILE,65,139,193,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Source File Type:",IDC_STATIC,14,155,48,8
+    EDITTEXT        IDC_EDIT_CPPFILE,65,155,193,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST_PATH,4,24,239,81,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    CTEXT           "Use",IDC_STATIC,4,15,23,9,SS_SUNKEN
+    CTEXT           "Searching Path",IDC_STATIC,28,15,215,9,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_FULLSRHPATH,4,109,274,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_PROPPAGE_TABBAR DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Tab Options"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Tab Position",IDC_STATIC,7,7,115,44
+    CONTROL         "Show icon on tab item(&I)",IDC_CHK_SHOWICON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,61,108,9
+    CONTROL         "Using shell command nn menu(&S)",IDC_CHK_SHELLMENU,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,10,134,9
+    GROUPBOX        "While open new document",IDC_STATIC,140,64,134,45
+    CONTROL         "Add to the head of tab(&P)",IDC_RAD_ADDF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,147,77,121,11
+    CONTROL         "Add to the tail of tab(&N)",IDC_RAD_ADDB,"Button",BS_AUTORADIOBUTTON,147,91,120,11
+    LTEXT           "(It would delay menu popup)",IDC_STATIC,145,22,115,9
+    CONTROL         "Dock on the top(&T)",IDC_RAD_TOP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,21,98,8
+    CONTROL         "Dock on the bottom(&B)",IDC_RAD_BOTTOM,"Button",BS_AUTORADIOBUTTON,11,35,102,8
+    LTEXT           "Searching deep:",IDC_STATIC,150,47,59,10
+    CONTROL         "Using smart file locating",IDC_CHK_SMART_LOC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,140,33,124,9
+    EDITTEXT        IDC_EDIT_SRH_DEEP,211,46,40,12,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Group same name items(&G)",IDC_CHK_GROUP_SAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,72,108,9
+    LTEXT           "Tab color theme :",IDC_STATIC,12,104,69,9
+    COMBOBOX        IDC_CMB_THEME,13,117,109,65,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show close button on tab item(&A)",IDC_CHK_SHOW_CLOSE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,85,122,9
+END
+
+IDD_PROPPAGE_GENERAL DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General Options"
+FONT 8, "Tahoma", 0, 0, 0x0
+BEGIN
+    CONTROL         "Run TabsiHost.exe while Windows startup(&R)",IDC_CHK_AUTORUN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,184,10
+    CONTROL         "Show Splash Windows on TabSiPlus loading(&W)",IDC_CHK_SHOESPLASH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,21,188,10
+    CONTROL         "Enable Smart Flip(&F)",IDC_CHK_SMARTFLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,33,96,10
+    CONTROL         "Only hook the first instance of Source Insight(&O)",IDC_CHK_ONLYONCE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,212,10
+    LTEXT           "Source Insight program location :",IDC_STATIC,7,63,133,8
+    EDITTEXT        IDC_EDIT_SILOCATION,7,77,267,13,ES_AUTOHSCROLL
+    GROUPBOX        "Custom menu colors",IDC_STATIC,7,99,267,65
+    PUSHBUTTON      "Normal Text",IDC_COLORPICKER_MENUTEXT,24,113,84,14
+    PUSHBUTTON      "Normal Background",IDC_COLORPICKER_MENUBKGND,24,130,84,14
+    PUSHBUTTON      "Left Bar",IDC_COLORPICKER_MENULEFT,24,147,84,14
+    PUSHBUTTON      "Hover Text",IDC_COLORPICKER_MENUTEXTHI,169,113,84,14
+    PUSHBUTTON      "Hover Background",IDC_COLORPICKER_MENUBKGNDHI,169,130,84,14
+    PUSHBUTTON      "Focus Frame",IDC_COLORPICKER_MENUFRAME,169,147,84,14
+END
+
+IDD_SELECT_FOLDER_DLG DIALOGEX 0, 0, 276, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Search Folder"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FOLDER,7,18,244,13,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "...",IDC_BTN_BOWRSE,253,17,18,14
+    DEFPUSHBUTTON   "OK",IDOK,86,64,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,138,64,50,14
+    CONTROL         "Include All Sub-Folders (&I)",IDC_CHK_INCLUDE_SUBFOLDER,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,39,99,10
+END
+
+IDD_CHECKOUT_DLG DIALOGEX 0, 0, 273, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check Out Files"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,115,50,14
+    LTEXT           "File Location:",IDC_STATIC,5,6,92,8
+    LTEXT           "Comment:",IDC_STATIC,5,33,61,8
+    EDITTEXT        IDC_EDIT_COMMENT,5,44,210,61,ES_MULTILINE | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "Advance...",IDC_BTN_ADV,219,45,50,14
+    EDITTEXT        IDC_STC_FILE_NAME,5,17,264,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_CHECKIN_DLG DIALOGEX 0, 0, 273, 149
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check In Files"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,128,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,128,50,14
+    LTEXT           "File Location:",IDC_STATIC,5,6,88,8
+    LTEXT           "Comment:",IDC_STATIC,5,32,71,8
+    EDITTEXT        IDC_EDIT_COMMENT,5,43,211,61,ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "Advance...",IDC_BTN_ADV,220,44,50,14
+    CONTROL         "Keep Checkout (&K)",IDC_CHK_KEEP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,108,84,10
+    EDITTEXT        IDC_STC_FILE_NAME,5,16,264,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_ADD_DLG DIALOGEX 0, 0, 273, 165
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Files to Source Control"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_COMMENT,5,46,209,60,ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "Advance...",IDC_BTN_ADV,219,47,50,14
+    CONTROL         "Checkout After Adding to Source Control (&A)",IDC_CHK_ADD_CHKOUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,109,188,10
+    CONTROL         "Text File (&T)",IDC_CHK_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,122,68,10
+    DEFPUSHBUTTON   "OK",IDOK,85,144,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,144,50,14
+    LTEXT           "File Location:",IDC_STATIC,5,6,91,8
+    LTEXT           "Comment:",IDC_STATIC,5,35,56,8
+    EDITTEXT        IDC_STC_FILE_NAME,5,17,264,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROPPAGE_FLIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 278
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_PROPPAGE_TABBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_PROPPAGE_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_SELECT_FOLDER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TECH_SUPPORT        "http://blog.csdn.net/orbit/"
+    IDS_FAIL_OPEN_HELP      "Can't open local help file!"
+    IDS_OPTION_SHEET_TITLE  "Options"
+    IDS_COLORPICKER_DEFAULT_TEXT "Automatic"
+    IDS_COLORPICKER_CUSTOM_TEXT "More Colours..."
+    IDS_UNSAVED_TT          "(New Document)"
+    IDS_SIWIN_TT            "Docking Source Insight Window"
+    IDS_MENU_TT             "Source Insight TabSiPlus"
+    IDS_HELP_FILE_NAME      "help.htm"
+    IDS_DEFAULT_FLIP_PATH   "<The same directory of flip file>"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ADD_FLIP_PATH       "Add search path for C++/H file Flip"
+    IDS_TOO_MUCH_FLIP_PATH  "too much search path you setted(more than 64), please remove some no longer use path.\r\n(too much search path would slowed the speed of file switch)"
+    IDS_TOOLBAR_TT          "C/CPP/H Files Flip"
+    IDS_INTERNAL_ERROR      "Internal error occured, TabSi Plus will be shutdown!"
+    IDS_TIME_EXPIRED        "This software has expired, please visit \r\n http://www.winmsg.com to download new time extending version. \r\n\r\n Why set the time limitation? \r\nBecause this is a illegal patch(plus) program which invade the integrity of ""Source  Insight"" software, I don't know how long time people can use this program before Source Dynamic company start to complain it, so I set this limitation, just for the purpose of reducing responsibility."
+    IDS_FOLDER_ACCESS_ERROR "Folder access failed, it's not existed!"
+    IDS_NO_SCC_PROVIDER     "Can't find Source Control Provider information, Please reinstall your Source Control software correctly!"
+    IDS_SELECT_WORKING_BASE "Select Working Project Code Base Folder"
+    IDS_NEED_PRJPATH        "Please input the base directory of current working project, such as a sub-folder's path name in a Clear Case view."
+    IDS_NEED_PRJNAME        "Please input the project name "
+    IDS_NEED_USERNAME       "Please input the user name for Source Control Server"
+    IDS_NEED_PASSWORD       "Please input the password"
+    IDS_SCC_INIT_ERROR      "Failed to initialize Source Control!"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\TabSiPlus.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
