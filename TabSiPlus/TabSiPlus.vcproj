@@ -861,6 +861,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\Particle.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\Common\PIDL.CPP"
 				>
 				<FileConfiguration
@@ -899,6 +903,18 @@
 						PreprocessorDefinitions=""
 					/>
 				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\PowerMode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PowerModeConfig.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PowerModePage.cpp"
+				>
 			</File>
 			<File
 				RelativePath="SelectFolderDlg.cpp"
@@ -1438,7 +1454,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Particle.h"
+				>
+			</File>
+			<File
 				RelativePath="..\Common\PIDL.H"
+				>
+			</File>
+			<File
+				RelativePath=".\PowerMode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\PowerModeConfig.h"
+				>
+			</File>
+			<File
+				RelativePath=".\PowerModePage.h"
 				>
 			</File>
 			<File

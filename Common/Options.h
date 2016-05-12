@@ -35,6 +35,10 @@ extern LPCTSTR lpszUseName;
 extern LPCTSTR lpszPassword;
 extern LPCTSTR lpszPrjName;
 
+extern LPCTSTR lpszPowerColorMode;
+extern LPCTSTR lpszPowerInitialColor;
+extern LPCTSTR lpszPowerFadeoutColor;
+
 void SetRegistryRootKey(HKEY hRootKey);
 
 

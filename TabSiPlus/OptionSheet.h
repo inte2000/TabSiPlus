@@ -16,6 +16,7 @@
 #include "TabBarPage.h"
 #include "FlipPage.h"
 #include "GeneralPage.h"
+#include "PowerModePage.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // COptionSheet
@@ -35,10 +36,11 @@ public:
 // Attributes
 public:
     //##ModelId=431C34CA01F5
-    CTabBarPage        *m_pTabBarPage;
+    CTabBarPage         *m_pTabBarPage;
     //##ModelId=431C34CA01FA
-    CFlipPage            *m_pFlipPage;
-    CGeneralPage  *m_pGeneralPage;
+    CFlipPage           *m_pFlipPage;
+    CGeneralPage        *m_pGeneralPage;
+    CPowerModePage      *m_pPowerModePage;
 
     CWnd *m_pNotifyWnd;
 // Operations

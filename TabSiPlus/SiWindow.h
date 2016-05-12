@@ -16,6 +16,8 @@
 #ifdef INSTALL_SI_MENU_THEME
 #include "OwnerDrawMenuMgmt.h"
 #endif
+#include "PowerMode.h"
+
 /////////////////////////////////////////////////////////////////////////////
 // CSiWindow window
 
@@ -42,10 +44,14 @@ protected:
     virtual void PostNcDestroy();
     virtual void PreSubclassWindow();
     void OnDestroy();
+    void OnTimer(UINT_PTR nIDEvent);
     void OnMDIActive(WPARAM wParam, LPARAM lParam);
+    void OnKeyMessage(UINT nChar, UINT nFlags);
     int OnGetWindowText(WPARAM wParam, LPARAM lParam);
 
 protected:
+    CPowerMode m_powerMode;
+    UINT_PTR m_timerId;
 #ifdef INSTALL_SI_MENU_THEME
     COwnerDrawMenuMgmt m_ActiveMenus;
 #endif

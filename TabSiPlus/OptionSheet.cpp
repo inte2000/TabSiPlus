@@ -46,6 +46,8 @@ COptionSheet::~COptionSheet()
         delete m_pFlipPage;
     if(m_pGeneralPage)
         delete m_pGeneralPage;
+    if(m_pPowerModePage)
+        delete m_pPowerModePage;
 }
 
 
@@ -72,5 +74,9 @@ void COptionSheet::AddPages()
     m_pGeneralPage = new CGeneralPage;
     m_pGeneralPage->m_psp.dwFlags &= ~PSP_HASHELP;
     AddPage(m_pGeneralPage);
+
+    m_pPowerModePage = new CPowerModePage;
+    m_pPowerModePage->m_psp.dwFlags &= ~PSP_HASHELP;
+    AddPage(m_pPowerModePage);
 }
 

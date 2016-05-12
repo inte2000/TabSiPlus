@@ -181,7 +181,9 @@ LONG CGeneralPage::OnColorPickerSelEndOK(UINT lParam, LONG wParam)
     if(wParam == IDC_COLORPICKER_MENUTEXTHI || wParam == IDC_COLORPICKER_MENUTEXT 
         || wParam == IDC_COLORPICKER_MENULEFT || wParam == IDC_COLORPICKER_MENUFRAME
             || wParam == IDC_COLORPICKER_MENUBKGNDHI || wParam == IDC_COLORPICKER_MENUBKGND )
+    {
         SetModified();
+    }
     return TRUE;
 }
 

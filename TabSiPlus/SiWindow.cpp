@@ -20,12 +20,15 @@ static char THIS_FILE[] = __FILE__;
 
 #define SWP_NOEVERYTHING         (SWP_NOSIZE | SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE)
 
+#define PW_TIMER_ID          0x1423   //need a very very very different value that source insight may using
+#define PW_TIMER_ELAPSE      25
 /////////////////////////////////////////////////////////////////////////////
 // CSiWindow
 
-CSiWindow::CSiWindow()
+CSiWindow::CSiWindow() : m_powerMode(GlobalPowerModeConfig())
 {
     m_szTitle[0] = 0;
+    m_timerId = 0;
 }
 
 CSiWindow::~CSiWindow()
@@ -36,10 +39,18 @@ void CSiWindow::Attach(HWND hWnd)
 {
     ASSERT(hWnd);
     Subclass(hWnd);
+    m_timerId = ::SetTimer(hWnd, PW_TIMER_ID, PW_TIMER_ELAPSE, NULL);
+    m_powerMode.Attach(hWnd);
 }
 
 HWND CSiWindow::Detach()
 {
+    if(m_timerId != 0)
+    {
+        ::KillTimer(m_hWnd, PW_TIMER_ID);
+        m_timerId = 0;
+    }
+    m_powerMode.Detach();
     HWND hTmp = m_hWnd;
     Unsubclass();
     return hTmp;
@@ -56,10 +67,6 @@ void CSiWindow::SetActive(BOOL bAvtive)
     }
 }
 
-void CSiWindow::OnDestroy() 
-{
-}
-
 void CSiWindow::PostNcDestroy() 
 {
 }
@@ -68,6 +75,18 @@ void CSiWindow::PreSubclassWindow()
 {
     GetWindowText(m_szTitle, 256);
     CSubclassWnd::PreSubclassWindow();
+}
+
+void CSiWindow::OnDestroy() 
+{
+}
+
+void CSiWindow::OnTimer(UINT_PTR nIDEvent)
+{
+    if(m_timerId == nIDEvent)
+    {
+        m_powerMode.ShowParticles();
+    }
 }
 
 /*
@@ -84,7 +103,63 @@ void CSiWindow::OnMDIActive(WPARAM wParam, LPARAM lParam)
     {
         g_pSiFrameWnd->OnSiWindowActivated(hActived, hDeactived);
     }
+}
 
+BOOL IsNeedBurstChar(UINT nChar)
+{
+    if((nChar >= 0x41) && (nChar <= 0x5A))
+        return TRUE;
+
+    if((nChar >= 0x60) && (nChar <= 0x7A))
+        return TRUE;
+
+    if((nChar >= 0x30) && (nChar <= 0x39))
+        return TRUE;
+
+    if((nChar >= 0x321) && (nChar <= 0x32B))
+        return TRUE;
+
+    if((nChar >= 0x33A) && (nChar <= 0x340))
+        return TRUE;
+
+    if((nChar >= 0x37B) && (nChar <= 0x37E))
+        return TRUE;
+
+    if((nChar >= 0x35E) && (nChar <= 0x35F))
+        return TRUE;
+
+    if((nChar >= 0x5B) && (nChar <= 0x5D))
+        return TRUE;
+
+    if((nChar >= 0x2C) && (nChar <= 0x2F))
+        return TRUE;
+
+    if((nChar == 0x08) || (nChar == 0x09) || (nChar == 0x0D) || (nChar == 0x20) 
+        || (nChar == 0x308) || (nChar == 0x309) || (nChar == 0x30D) || (nChar == 0x320) 
+        || (nChar == 0x27) || (nChar == 0x802E) || (nChar == 0x832E) || (nChar == 0x3B) 
+        || (nChar == 0x3D))
+    {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+void CSiWindow::OnKeyMessage(UINT nChar, UINT nFlags)
+{
+    TRACE(_T("0x7e9 nChar = %x, nFlags = %x\n"), nChar, nFlags);
+
+    if(IsNeedBurstChar(nChar))
+    {
+        POINT carPt = { 0 };
+        ::GetCaretPos(&carPt);
+        if((carPt.x >= 0) && (carPt.y >= 0))
+        {
+            //ClientToScreen(&carPt);
+            TRACE(_T("carPt.x = %d, carPt.y = %d\n"), carPt.x, carPt.y);
+            m_powerMode.AddParticles(carPt.x, carPt.y);
+        }
+    }
 }
 
 int CSiWindow::OnGetWindowText(WPARAM wParam, LPARAM lParam)
@@ -108,6 +183,8 @@ int CSiWindow::OnGetWindowText(WPARAM wParam, LPARAM lParam)
 LRESULT CSiWindow::WindowProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     LRESULT lr;
+    TRACE(_T("Current Thread Id = %x, uMsg = %x\n"), ::GetCurrentThreadId(), uMsg);
+
     switch(uMsg)
     {
         case WM_GETTEXT:
@@ -115,6 +192,31 @@ LRESULT CSiWindow::WindowProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
             lr = CSubclassWnd::WindowProc(uMsg, wParam, lParam);
             OnGetWindowText(wParam,lParam);
             return lr;
+        }
+        case 0x7e9:
+        {
+            UINT nChar = static_cast<UINT>(wParam);
+            UINT nFlags = static_cast<UINT>(lParam);
+
+            if((nChar == 0x08) || (nChar == 0x09) || (nChar == 0x0D) || (nChar == 0x802e)
+                || (nChar == 0x308) || (nChar == 0x309) || (nChar == 0x30D)) 
+            {
+                lr = CSubclassWnd::WindowProc(uMsg, wParam, lParam);
+                OnKeyMessage(nChar, nFlags);
+            }
+            else
+            {
+                OnKeyMessage(nChar, nFlags);
+                lr = CSubclassWnd::WindowProc(uMsg, wParam, lParam);
+            }
+            
+            return lr;
+        }
+        case WM_TIMER:
+        {
+            UINT_PTR timerId = static_cast<UINT_PTR>(wParam);
+            OnTimer(timerId);
+            break;//让默认的处理函数继续处理
         }
         case WM_DESTROY:
         {

@@ -51,20 +51,33 @@
 #define IDC_BTN_UPFLPPATH               1019
 #define IDC_CMB_THEME                   1019
 #define IDC_BTN_DOWNFLPPATH             1020
+#define IDC_RAD_RANDOM_COLOR            1020
 #define IDC_EDIT_HEADFILE               1021
+#define IDC_RAD_STATIC_COLOR            1021
 #define IDC_EDIT_CPPFILE                1022
 #define IDC_EDIT_FOLDER                 1022
+#define IDC_EDIT_PARTICLE_MIN           1022
 #define IDC_STC_HOMEPAGE                1023
 #define IDC_BTN_BOWRSE                  1023
+#define IDC_EDIT_PARTICLE_MAX           1023
 #define IDC_LIST_PATH                   1024
 #define IDC_CHK_INCLUDE_SUBFOLDER       1024
+#define IDC_EDIT_VX_MIN                 1024
 #define IDC_EDIT_MAXWND                 1025
+#define IDC_EDIT_VX_MAX                 1025
 #define IDC_SPIN_MAXWND                 1026
+#define IDC_EDIT_VY_MIN                 1026
+#define IDC_EDIT_VY_MAX                 1027
 #define IDD_PROPPAGE_GENERAL            1028
+#define IDC_EDIT2                       1028
 #define IDB_TOOLBAR                     1029
+#define IDC_COLORPICKER_INITIAL         1029
 #define IDB_TOOLBARS                    1030
 #define IDD_ADD_DLG                     1030
+#define IDC_COLORPICKER_FADEOUT         1030
 #define IDI_KEYS                        1031
+#define IDD_PROPPAGE_POWERMODE          1031
+#define IDC_EDIT_ACCELERATION           1031
 #define IDS_TECH_SUPPORT                32771
 #define IDS_FAIL_OPEN_HELP              32772
 #define IDS_OPTION_SHEET_TITLE          32773
@@ -110,7 +123,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        1032
 #define _APS_NEXT_COMMAND_VALUE         32811
-#define _APS_NEXT_CONTROL_VALUE         1020
+#define _APS_NEXT_CONTROL_VALUE         1032
 #define _APS_NEXT_SYMED_VALUE           1000
 #endif
 #endif

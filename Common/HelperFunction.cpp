@@ -12,12 +12,14 @@ COLORREF DarkenColor(long lScale, COLORREF lColor)
     return RGB(R, G, B); 
 }
 
-COLORREF MixedColor(COLORREF ColA,COLORREF ColB)
+COLORREF MixedColor(COLORREF ColA,COLORREF ColB, double aRate)
 {
     // ( 86a + 14b ) / 100
-    int Red   = MulDiv(86,GetRValue(ColA),100) + MulDiv(14,GetRValue(ColB),100);
-    int Green = MulDiv(86,GetGValue(ColA),100) + MulDiv(14,GetGValue(ColB),100);
-    int Blue  = MulDiv(86,GetBValue(ColA),100) + MulDiv(14,GetBValue(ColB),100);
+    int ar = (int)(aRate * 100.0);
+    int br = 100 - ar;
+    int Red   = MulDiv(ar,GetRValue(ColA),100) + MulDiv(br,GetRValue(ColB),100);
+    int Green = MulDiv(ar,GetGValue(ColA),100) + MulDiv(br,GetGValue(ColB),100);
+    int Blue  = MulDiv(ar,GetBValue(ColA),100) + MulDiv(br,GetBValue(ColB),100);
 
     return RGB( Red,Green,Blue);
 }
@@ -228,6 +230,32 @@ void FillSolidRect(HDC hDC, int x, int y, int cx, int cy, COLORREF crColor)
     ExtTextOut(hDC, 0, 0, ETO_OPAQUE, &rect, NULL, 0, NULL );
 }
 
+void FillSolidRound(HDC hDC,const RECT& Rc,COLORREF crColor)
+{
+    HGDIOBJ hOld = SelectObject(hDC,GetStockObject(NULL_PEN));
+	HBRUSH hBr = CreateSolidBrush(crColor);
+	HBRUSH hOldBr = (HBRUSH)SelectObject(hDC,hBr);
+
+	Ellipse(hDC,Rc.left,Rc.top,Rc.right + 1,Rc.bottom + 1);
+	
+    SelectObject(hDC,hOldBr);
+	SelectObject(hDC,hOld);
+	DeleteObject(hBr);
+}
+/*
+void FillSolidRoundRect(HDC hDC,const RECT& Rc,int nWidthCor,int nHeightCor,COLORREF crColor)
+{
+	HGDIOBJ hOld = SelectObject(hDC,GetStockObject(NULL_PEN));
+	HBRUSH hBr = CreateSolidBrush(crColor);
+	HBRUSH hOldBr = (HBRUSH)SelectObject(hDC,hBr);
+	
+	RoundRect(hDC,Rc.left,Rc.top,Rc.right + 1,Rc.bottom + 1,nWidthCor,nHeightCor);
+	
+	SelectObject(hDC,hOldBr);
+	SelectObject(hDC,hOld);
+	DeleteObject(hBr);
+}
+*/
 void Draw3dRect( HDC hDC, int x, int y, int cx, int cy, COLORREF clrTopLeft, COLORREF clrBottomRight )
 {
    FillSolidRect( hDC, x, y, cx - 1, 1, clrTopLeft );

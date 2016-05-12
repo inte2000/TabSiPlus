@@ -9,6 +9,7 @@
 #include "GlobalFileList.h"
 #include "CmdIconResource.h"
 #include "WndUIResource.h"
+#include "PowerModeConfig.h"
 #include "Globals.h"
 
 /*
@@ -229,7 +230,6 @@ void InitGlobalVar()
         _tcscpy(g_szCPPType,_T(".cpp;.c")); //_T(".cpp;.c;.cxx;.cc"));
 
     CWndUIResource *pUIRes = GlobalGetUIRes();
-    WZ_ASSERT(pUIRes);
 
     COLORREF crTmp;
     for(i = 0; i < nCustomColorCount; i++)
@@ -239,6 +239,17 @@ void InitGlobalVar()
             pUIRes->SetColor(CustomResourceColorName[i],crTmp);
         }
     }
+
+    int powerColorMode;
+    COLORREF crInitial, crFadeout;
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPowerColorMode, powerColorMode, 0);
+    GetColorRegPorpValue(lpszKeyRoot, lpszPowerInitialColor, crInitial, RGB(255,255,255));
+    GetColorRegPorpValue(lpszKeyRoot, lpszPowerFadeoutColor, crFadeout, RGB(166, 202, 240));
+
+    CPowerModeConfig *pmCfg = GlobalPowerModeConfig();
+    pmCfg->SetInitialColor(crInitial);
+    pmCfg->SetFadeoutColor(crFadeout);
+    pmCfg->SetColorMode(powerColorMode);
 }
 
 BOOL SetWindowsAutoRunKey(BOOL bEnable)

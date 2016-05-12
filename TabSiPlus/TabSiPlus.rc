@@ -104,13 +104,13 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,99,2,1749
- PRODUCTVERSION 0,99,2,1749
+ FILEVERSION 0,99,3,1928
+ PRODUCTVERSION 0,99,3,1928
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
- FILEFLAGS 0x1L
+ FILEFLAGS 0x9L
 #else
- FILEFLAGS 0x0L
+ FILEFLAGS 0x8L
 #endif
  FILEOS 0x4L
  FILETYPE 0x2L
@@ -123,12 +123,13 @@ BEGIN
             VALUE "Comments", "Source Dynamics 可能不喜欢这个程序"
             VALUE "CompanyName", "Orbit Studio"
             VALUE "FileDescription", "TabSiPlus DLL"
-            VALUE "FileVersion", "0, 99, 2, 1749"
+            VALUE "FileVersion", "0, 99, 3, 1928"
             VALUE "InternalName", "水玉石"
             VALUE "LegalCopyright", "版权所有 (C) 2012 Orbit Studio"
             VALUE "OriginalFilename", "TabSiPlus.DLL"
+            VALUE "PrivateBuild", "1928"
             VALUE "ProductName", "Source Insight外挂程序"
-            VALUE "ProductVersion", "0, 99, 2, 1749"
+            VALUE "ProductVersion", "0, 99, 3, 1928"
         END
     END
     BLOCK "VarFileInfo"
@@ -181,14 +182,14 @@ END
 
 IDD_DLG_ABOUT DIALOGEX 0, 0, 221, 127
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "关于 ""TabSiPlus"" [1749]"
+CAPTION "关于 ""TabSiPlus"" [1928]"
 FONT 9, "宋体", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "确定",IDOK,85,108,50,14
     CONTROL         135,IDC_STC_TOPBANNER,"Static",SS_BITMAP | SS_SUNKEN,0,0,221,28
     LTEXT           "关于",IDC_STATIC,5,33,18,8
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,31,36,182,1
-    CTEXT           "Source Insight 标签外挂 TabSiPlus 0.99b2",IDC_STATIC,34,44,178,8
+    CTEXT           "Source Insight 标签外挂 TabSiPlus 0.99b3",IDC_STATIC,34,44,178,8
     ICON            IDI_TABSIHOST,IDC_STC_ICON,6,49,20,20
     CTEXT           "Copyright 2006  Orbit Studio",IDC_STATIC,34,56,178,8
     CTEXT           "关于“TabSiPlus”的更多信息请访问",IDC_STATIC,34,71,178,8
@@ -317,6 +318,33 @@ BEGIN
     EDITTEXT        IDC_STC_FILE_NAME,5,19,264,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
 END
 
+IDD_PROPPAGE_POWERMODE DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Power Mode"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "微粒数量范围：",IDC_STATIC,7,9,57,8
+    LTEXT           "水平初速度范围：",IDC_STATIC,7,25,65,8
+    LTEXT           "垂直初速度范围：",IDC_STATIC,7,44,65,8
+    LTEXT           "加速度：",IDC_STATIC,7,62,33,8
+    GROUPBOX        "初始颜色",IDC_STATIC,7,89,127,75
+    GROUPBOX        "消隐颜色",IDC_STATIC,147,89,127,75
+    CONTROL         "使用随机颜色",IDC_RAD_RANDOM_COLOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,104,64,10
+    CONTROL         "使用静态颜色",IDC_RAD_STATIC_COLOR,"Button",BS_AUTORADIOBUTTON,16,121,64,10
+    EDITTEXT        IDC_EDIT_PARTICLE_MIN,77,7,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARTICLE_MAX,187,7,79,14,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,160,10,21,8
+    EDITTEXT        IDC_EDIT_VX_MIN,77,24,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VX_MAX,187,24,79,14,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,160,26,21,8
+    EDITTEXT        IDC_EDIT_VY_MIN,77,41,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VY_MAX,187,41,79,14,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,161,43,21,8
+    EDITTEXT        IDC_EDIT_ACCELERATION,77,58,79,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "初始颜色",IDC_COLORPICKER_INITIAL,30,138,88,17
+    PUSHBUTTON      "消隐颜色",IDC_COLORPICKER_FADEOUT,163,135,88,17
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -352,6 +380,14 @@ BEGIN
     IDD_SELECT_FOLDER_DLG, DIALOG
     BEGIN
         LEFTMARGIN, 1
+    END
+
+    IDD_PROPPAGE_POWERMODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -412,13 +448,13 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,99,2,1749
- PRODUCTVERSION 0,99,2,1749
+ FILEVERSION 0,99,3,1928
+ PRODUCTVERSION 0,99,3,1928
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
- FILEFLAGS 0x1L
+ FILEFLAGS 0x9L
 #else
- FILEFLAGS 0x0L
+ FILEFLAGS 0x8L
 #endif
  FILEOS 0x4L
  FILETYPE 0x2L
@@ -431,12 +467,13 @@ BEGIN
             VALUE "Comments", "Source Dynamics may hate this program"
             VALUE "CompanyName", "Orbit Studio"
             VALUE "FileDescription", "TabSiPlus DLL"
-            VALUE "FileVersion", "0, 99, 2, 1749"
+            VALUE "FileVersion", "0, 99, 3, 1928"
             VALUE "InternalName", "carnelian"
             VALUE "LegalCopyright", "Copyright (C) 2006 Orbit Studio"
             VALUE "OriginalFilename", "TabSiPlus.DLL"
+            VALUE "PrivateBuild", "1928"
             VALUE "ProductName", "TabSiPlus for Source Insight"
-            VALUE "ProductVersion", "0, 99, 2, 1749"
+            VALUE "ProductVersion", "0, 99, 3, 1928"
         END
     END
     BLOCK "VarFileInfo"
@@ -489,14 +526,14 @@ END
 
 IDD_DLG_ABOUT DIALOGEX 0, 0, 221, 122
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About ""TabSiPlus"" [1749]"
+CAPTION "About ""TabSiPlus"" [1928]"
 FONT 8, "Tahoma", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK(&O)",IDOK,85,102,50,14
     CONTROL         135,IDC_STC_TOPBANNER,"Static",SS_BITMAP | SS_SUNKEN,0,0,221,26
     LTEXT           "About",IDC_STATIC,5,35,18,8
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,31,38,182,1
-    CTEXT           "Source Insight PlusIn TabSiPlus 0.99b2",IDC_STATIC,40,46,170,8
+    CTEXT           "Source Insight PlusIn TabSiPlus 0.99b3",IDC_STATIC,40,46,170,8
     ICON            IDI_TABSIHOST,IDC_STC_ICON,6,51,20,20
     CTEXT           "Copyright 2006  Orbit Studio",IDC_STATIC,40,58,170,8
     CTEXT           "More information On Internet : ",IDC_STATIC,40,72,170,8
@@ -631,6 +668,33 @@ BEGIN
     EDITTEXT        IDC_STC_FILE_NAME,5,17,264,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
 END
 
+IDD_PROPPAGE_POWERMODE DIALOGEX 0, 0, 282, 171
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Power Mode"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    LTEXT           "Particles Number Range :",IDC_STATIC,7,10,92,7
+    LTEXT           "Horizontal Start Velocity :",IDC_STATIC,7,24,98,7
+    LTEXT           "Vertical Start Velocity :",IDC_STATIC,7,42,100,7
+    LTEXT           "Acceleration :",IDC_STATIC,7,58,102,7
+    GROUPBOX        "Initial Color",IDC_STATIC,7,83,127,70
+    GROUPBOX        "Fadeout Color",IDC_STATIC,147,83,127,70
+    CONTROL         "Use Random Color",IDC_RAD_RANDOM_COLOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,97,97,9
+    CONTROL         "Use Static Color",IDC_RAD_STATIC_COLOR,"Button",BS_AUTORADIOBUTTON,16,110,87,9
+    EDITTEXT        IDC_EDIT_PARTICLE_MIN,97,8,74,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARTICLE_MAX,199,8,74,13,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,177,10,17,7
+    EDITTEXT        IDC_EDIT_VX_MIN,97,23,74,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VX_MAX,199,23,74,13,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,177,25,17,7
+    EDITTEXT        IDC_EDIT_VY_MIN,97,39,74,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VY_MAX,199,39,74,13,ES_AUTOHSCROLL
+    LTEXT           "-----",IDC_STATIC,177,41,17,7
+    EDITTEXT        IDC_EDIT_ACCELERATION,97,55,74,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Initial Color",IDC_COLORPICKER_INITIAL,30,127,88,16
+    PUSHBUTTON      "Fadeout Color",IDC_COLORPICKER_FADEOUT,163,125,88,16
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -666,6 +730,14 @@ BEGIN
     IDD_SELECT_FOLDER_DLG, DIALOG
     BEGIN
         LEFTMARGIN, 1
+    END
+
+    IDD_PROPPAGE_POWERMODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
     END
 END
 #endif    // APSTUDIO_INVOKED

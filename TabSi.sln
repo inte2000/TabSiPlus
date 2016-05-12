@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TabSiHost", "TabSiHost\TabS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TabSiPlus", "TabSiPlus\TabSiPlus.vcproj", "{5204C1F5-50C7-45F7-83BD-6877B5C2377F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tabtest", "tabtest\tabtest.vcproj", "{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Unicode|Win32 = Debug Unicode|Win32
@@ -39,6 +41,14 @@ Global
 		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
 		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release|Win32.ActiveCfg = Release|Win32
 		{5204C1F5-50C7-45F7-83BD-6877B5C2377F}.Release|Win32.Build.0 = Release|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Debug Unicode|Win32.ActiveCfg = Debug|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Debug Unicode|Win32.Build.0 = Debug|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Debug|Win32.Build.0 = Debug|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Release Unicode|Win32.ActiveCfg = Release|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Release Unicode|Win32.Build.0 = Release|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Release|Win32.ActiveCfg = Release|Win32
+		{91C4F874-23E9-4FA1-9BB1-B6D2575E4693}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

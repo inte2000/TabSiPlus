@@ -1110,7 +1110,7 @@ void CWzTabCtrl::OnDestroy()
 
 BOOL CWzTabCtrl::OnEraseBkgnd(CDC* pDC) 
 {
-    TRACE(_T("OnEraseBkgnd\r\n"));
+    //TRACE(_T("OnEraseBkgnd\r\n"));
     return TRUE;
 }
 

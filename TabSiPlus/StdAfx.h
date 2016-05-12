@@ -53,6 +53,7 @@
 #include <vector>
 #include <map>
 #include <stack>
+#include <afxdlgs.h>
 using namespace std;
 
 typedef basic_string< TCHAR > TString;

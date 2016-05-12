@@ -1,3 +1,7 @@
+[1928]
+New : 增加tab标签颜色和主题制作工具tabtest.exe的源代码
+New : 新增atom等工具上流行的power mode
+
 [1749]
 Fixed : 英文版主题ComboBox不是Drop List模式
 Fixed : 设置选项窗口如果选择取消操作后，造成实际状态与配置状态不一致问题
