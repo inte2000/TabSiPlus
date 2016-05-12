@@ -1,0 +1,83 @@
+//本日志文件由 "Tabbar Add-in(1.16.2517) For Visual C++ 6.0" 创建
+//项目文件:D:\Code\tabtest\tabtest.dsp
+//如果文件增长的很大请删除除本节之外的其他信息
+
+[MAIN]
+nBuildNumber = 11
+
+[Build00000001]
+sStartTime = 2007-11-14 08:34:22
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:34:23
+
+[Build00000002]
+sStartTime = 2007-11-14 08:34:28
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:34:29
+
+[Build00000003]
+sStartTime = 2007-11-14 08:34:35
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:34:35
+
+[Build00000004]
+sStartTime = 2007-11-14 08:36:00
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:36:01
+
+[Build00000005]
+sStartTime = 2007-11-14 08:36:31
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:36:32
+
+[Build00000006]
+sStartTime = 2007-11-14 08:42:05
+sCompileUser = user
+nErrors = 2
+nWarns = 0
+sEndTime = 2007-11-14 08:42:08
+
+[Build00000007]
+sStartTime = 2007-11-14 08:47:04
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:47:04
+
+[Build00000008]
+sStartTime = 2007-11-14 08:47:13
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:47:15
+
+[Build00000009]
+sStartTime = 2007-11-14 08:47:34
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:47:35
+
+[Build00000010]
+sStartTime = 2007-11-14 08:49:50
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 08:49:51
+
+[Build00000011]
+sStartTime = 2007-11-14 09:02:16
+sCompileUser = user
+nErrors = 1
+nWarns = 0
+sEndTime = 2007-11-14 09:02:24

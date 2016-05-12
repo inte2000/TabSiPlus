@@ -1,0 +1,342 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\tabtest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\tabtest.ico"
+IDI_CLOSE_BTN           ICON                    "res\\2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 tabtest"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "tabtest 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_TABTEST_DIALOG DIALOGEX 0, 0, 321, 294
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "tabtest"
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,260,0,50,14
+    PUSHBUTTON      "取消",IDCANCEL,260,23,50,14
+    PUSHBUTTON      "Add Items",IDC_BTN_ADDITEMS,139,13,50,14
+    PUSHBUTTON      "Group",IDC_BTN_GROUP,85,13,50,14
+    PUSHBUTTON      "Show Close",IDC_BTN_SHOWCLOSE,27,13,50,14
+    PUSHBUTTON      "Delete All",IDC_BTN_DELETEALL,193,13,50,14
+    PUSHBUTTON      "Delete Current",IDC_BTN_DELETEITEM,26,30,50,14
+    LISTBOX         IDC_LIST_MESSAGE,2,154,317,137,LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Theme",IDC_BTN_THEME,85,31,50,14
+END
+
+IDD_DLG_THEME_MAKER DIALOGEX 0, 0, 375, 302
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color Theme"
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "打开",IDC_BTN_OPEN,316,190,50,14
+    PUSHBUTTON      "保存",IDOK,316,213,50,14
+    PUSHBUTTON      "设置",IDC_BTN_OPTION,316,259,50,14
+    PUSHBUTTON      "关闭",IDCANCEL,316,282,50,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORMAL_T,73,114,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORMAL_C,73,129,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORMAL_B,73,144,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_TEXT_NORMAL,73,159,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_HOVER_T,225,114,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_HOVER_C,225,129,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_HOVER_B,225,144,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_TEXT_HOVER,225,159,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_ACTIVE_T,73,211,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_ACTIVE_C,73,226,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_ACTIVE_B,73,241,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_TEXT_ACTIVE,73,256,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_LAST_ACTIVE_T,225,212,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_LAST_ACTIVE_C,225,227,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_LAST_ACTIVE_B,225,242,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_TEXT_LAST_ACTIVE,225,257,65,14
+    GROUPBOX        "Hover",IDC_GROUP_HOVER,162,101,148,96
+    GROUPBOX        "Normal",IDC_GROUP_NORMAL,7,101,148,96
+    GROUPBOX        "Active",IDC_GROUP_ACTIVE,7,201,148,96
+    GROUPBOX        "Last Active",IDC_GROUP_LAST_ACTIVE,162,201,148,96
+    LTEXT           "背景颜色上：",IDC_STATIC,20,117,42,8
+    LTEXT           "背景颜色中：",IDC_STATIC,20,132,42,8
+    LTEXT           "背景颜色下：",IDC_STATIC,20,149,42,8
+    LTEXT           "文字颜色：",IDC_STATIC,20,163,35,8
+    LTEXT           "边框颜色：",IDC_STATIC,20,178,35,8
+    LTEXT           "背景颜色上：",IDC_STATIC,172,117,42,8
+    LTEXT           "背景颜色中：",IDC_STATIC,172,132,42,8
+    LTEXT           "背景颜色下：",IDC_STATIC,172,149,42,8
+    LTEXT           "文字颜色：",IDC_STATIC,177,163,35,8
+    LTEXT           "边框颜色：",IDC_STATIC,177,178,35,8
+    LTEXT           "背景颜色上：",IDC_STATIC,19,214,42,8
+    LTEXT           "背景颜色中：",IDC_STATIC,19,229,42,8
+    LTEXT           "背景颜色下：",IDC_STATIC,19,246,42,8
+    LTEXT           "文字颜色：",IDC_STATIC,19,260,35,8
+    LTEXT           "边框颜色：",IDC_STATIC,19,275,35,8
+    LTEXT           "背景颜色上：",IDC_STATIC,172,215,42,8
+    LTEXT           "背景颜色中：",IDC_STATIC,172,230,42,8
+    LTEXT           "背景颜色下：",IDC_STATIC,172,247,42,8
+    LTEXT           "文字颜色：",IDC_STATIC,177,261,35,8
+    LTEXT           "边框颜色：",IDC_STATIC,177,276,35,8
+    PUSHBUTTON      "字体",IDC_BTN_FONT,316,236,50,14
+    LTEXT           "标签窗口示例：",IDC_STATIC,5,4,49,8
+    PUSHBUTTON      "Button1",IDC_BTN_BORDER_NORMAL,73,174,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORDER_HOVER,225,174,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORDER_ACTIVE,73,271,65,14
+    PUSHBUTTON      "Button1",IDC_BTN_BORDER_LAST_ACTIVE,225,272,65,14
+END
+
+IDD_DLG_SETTING DIALOGEX 0, 0, 171, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 9, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,61,71,50,14
+    PUSHBUTTON      "取消",IDCANCEL,116,71,50,14
+    CONTROL         "合并同名标签分组",IDC_CHK_GROUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,9,71,10
+    CONTROL         "显示关闭按钮图表",IDC_CHK_SHOWCLOSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,22,71,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "tabtest Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "tabtest"
+            VALUE "LegalCopyright", "版权所有 (C) 2006"
+            VALUE "OriginalFilename", "tabtest.EXE"
+            VALUE "ProductName", "tabtest 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DLG_THEME_MAKER, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 369
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 297
+    END
+
+    IDD_DLG_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 165
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 85
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_SETTINGDLG     HTML                    "SettingDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FILETYPE            BITMAP                  "res\\FileType.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 tabtest(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_SMALL DIALOG  0, 0, 195, 127
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Property Page"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: layout property page",IDC_STATIC,53,59,90,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROPPAGE_SMALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\tabtest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
