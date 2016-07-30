@@ -19,10 +19,11 @@ CPowerModePage::CPowerModePage()
     CWndUIResource *pUIRes = GlobalGetUIRes();
 
     CPowerModeConfig *pmCfg = GlobalPowerModeConfig();
-
     m_colorMode = pmCfg->GetColorMode();
     m_crInitial = pmCfg->GetInitialColor();
     m_crFadeout = pmCfg->GetFadeoutColor();
+
+    m_iUsePowerMode = cfg_bUsePowerMode ? 1 : 0;
 }
 
 CPowerModePage::~CPowerModePage()
@@ -35,6 +36,7 @@ void CPowerModePage::DoDataExchange(CDataExchange* pDX)
     //{{AFX_DATA_MAP(CPowerModePage)
     DDX_Control(pDX, IDC_COLORPICKER_INITIAL, m_InitialPicker);
     DDX_Control(pDX, IDC_COLORPICKER_FADEOUT, m_FadeoutPicker);
+    DDX_Check(pDX, IDC_CHK_USE_POWERMODE, m_iUsePowerMode);
     //}}AFX_DATA_MAP
     DDX_ColourPicker(pDX, IDC_COLORPICKER_INITIAL, m_crInitial);
     DDX_ColourPicker(pDX, IDC_COLORPICKER_FADEOUT, m_crFadeout);
@@ -76,15 +78,18 @@ BOOL CPowerModePage::OnApply()
 {
     UpdateData(TRUE);
 
+    cfg_bUsePowerMode = (m_iUsePowerMode == 1);
+
     SetRegistryRootKey(HKEY_CURRENT_USER);
     SetIntegerRegPorpValue(lpszKeyRoot, lpszPowerColorMode, m_colorMode);
     SetColorRegPorpValue(lpszKeyRoot,lpszPowerInitialColor,m_crInitial);
     SetColorRegPorpValue(lpszKeyRoot,lpszPowerFadeoutColor,m_crFadeout);
+    SetBoolRegPorpValue(lpszKeyRoot, lpszUsePowerMode, cfg_bUsePowerMode);
+
 
     CWndUIResource *pUIRes = GlobalGetUIRes();
 
     CPowerModeConfig *pmCfg = GlobalPowerModeConfig();
-
     pmCfg->SetColorMode(m_colorMode);
     pmCfg->SetInitialColor(m_crInitial);
     pmCfg->SetFadeoutColor(m_crFadeout);

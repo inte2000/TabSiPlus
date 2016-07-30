@@ -39,6 +39,7 @@ LPCTSTR lpszPrjName = _T("CurrentProjectName");
 LPCTSTR lpszPowerColorMode = _T("PowerModeColorMode");
 LPCTSTR lpszPowerInitialColor = _T("PowerModeInitialColor");
 LPCTSTR lpszPowerFadeoutColor = _T("PowerModeFadeoutColor");
+LPCTSTR lpszUsePowerMode = _T("UsePowerMode");
 
 static HKEY s_hRootKey = HKEY_CURRENT_USER;
 

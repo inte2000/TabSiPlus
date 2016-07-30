@@ -14,9 +14,8 @@ COLORREF DarkenColor(long lScale, COLORREF lColor)
 
 COLORREF MixedColor(COLORREF ColA,COLORREF ColB, double aRate)
 {
-    // ( 86a + 14b ) / 100
     int ar = (int)(aRate * 100.0);
-    int br = 100 - ar;
+    int br = (100 - ar);
     int Red   = MulDiv(ar,GetRValue(ColA),100) + MulDiv(br,GetRValue(ColB),100);
     int Green = MulDiv(ar,GetGValue(ColA),100) + MulDiv(br,GetGValue(ColB),100);
     int Blue  = MulDiv(ar,GetBValue(ColA),100) + MulDiv(br,GetBValue(ColB),100);

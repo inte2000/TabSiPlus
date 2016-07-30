@@ -69,7 +69,6 @@
 #define IDC_EDIT_VY_MIN                 1026
 #define IDC_EDIT_VY_MAX                 1027
 #define IDD_PROPPAGE_GENERAL            1028
-#define IDC_EDIT2                       1028
 #define IDB_TOOLBAR                     1029
 #define IDC_COLORPICKER_INITIAL         1029
 #define IDB_TOOLBARS                    1030
@@ -78,6 +77,7 @@
 #define IDI_KEYS                        1031
 #define IDD_PROPPAGE_POWERMODE          1031
 #define IDC_EDIT_ACCELERATION           1031
+#define IDC_CHK_USE_POWERMODE           1032
 #define IDS_TECH_SUPPORT                32771
 #define IDS_FAIL_OPEN_HELP              32772
 #define IDS_OPTION_SHEET_TITLE          32773
@@ -123,7 +123,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        1032
 #define _APS_NEXT_COMMAND_VALUE         32811
-#define _APS_NEXT_CONTROL_VALUE         1032
+#define _APS_NEXT_CONTROL_VALUE         1033
 #define _APS_NEXT_SYMED_VALUE           1000
 #endif
 #endif

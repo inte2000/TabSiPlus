@@ -149,6 +149,11 @@ void CSiWindow::OnKeyMessage(UINT nChar, UINT nFlags)
 {
     TRACE(_T("0x7e9 nChar = %x, nFlags = %x\n"), nChar, nFlags);
 
+    if(!cfg_bUsePowerMode)
+    {
+        return;
+    }
+
     if(IsNeedBurstChar(nChar))
     {
         POINT carPt = { 0 };

@@ -36,4 +36,5 @@ protected:
     COLORREF         m_crInitial;
     COLORREF         m_crFadeout;
     int              m_colorMode;
+    int              m_iUsePowerMode;
 };

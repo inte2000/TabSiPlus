@@ -47,6 +47,8 @@ extern int cfg_iLeftBarWidth;
 
 extern BOOL cfg_bSmartFlip;
 
+extern BOOL cfg_bUsePowerMode;
+
 extern HINSTANCE g_TSuppDll;
 extern LPCTSTR lpszTSuppDll;
 extern LPCTSTR lpszNull;

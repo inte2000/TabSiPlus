@@ -28,7 +28,8 @@ BOOL cfg_bShowCloseBtn = FALSE;
 
 int cfg_iLeftBarWidth = 46;
 
-BOOL cfg_bSmartFlip;
+BOOL cfg_bSmartFlip = TRUE;
+BOOL cfg_bUsePowerMode = FALSE;
 
 TCHAR g_szCurDircetory[MAX_PATH] = {0};
 TCHAR g_szCurProjectPath[MAX_PATH] = {0};
@@ -245,6 +246,7 @@ void InitGlobalVar()
     GetIntegerRegPorpValue(lpszKeyRoot, lpszPowerColorMode, powerColorMode, 0);
     GetColorRegPorpValue(lpszKeyRoot, lpszPowerInitialColor, crInitial, RGB(255,255,255));
     GetColorRegPorpValue(lpszKeyRoot, lpszPowerFadeoutColor, crFadeout, RGB(166, 202, 240));
+    GetBoolRegPorpValue(lpszKeyRoot, lpszUsePowerMode, cfg_bUsePowerMode, FALSE);
 
     CPowerModeConfig *pmCfg = GlobalPowerModeConfig();
     pmCfg->SetInitialColor(crInitial);

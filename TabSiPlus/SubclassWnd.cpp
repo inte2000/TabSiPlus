@@ -17,6 +17,7 @@ static LRESULT CALLBACK SubclassWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPA
 {
     LRESULT lr;
     CSubclassWnd *pSubClass = NULL;
+
     if(CSubclassWnd::m_SubclassWndMap.Lookup(hWnd, pSubClass) && pSubClass != NULL)
     {
         lr = pSubClass->WindowProc(uMsg, wParam, lParam);
