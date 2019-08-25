@@ -30,6 +30,13 @@ int cfg_iLeftBarWidth = 46;
 
 BOOL cfg_bSmartFlip = TRUE;
 BOOL cfg_bUsePowerMode = FALSE;
+int cfg_uPartNumMin = 5;
+int cfg_uPartNumMax = 15;
+int cfg_uPartVxMin = 1000; //ÐÞÕý 2000
+int cfg_uPartVxMax = 3000;
+int cfg_uPartVyMin = 2000; //ÐÞÕý 5000
+int cfg_uPartVyMax = 4000;
+int cfg_uPartGravity = 85; //0.085
 
 TCHAR g_szCurDircetory[MAX_PATH] = {0};
 TCHAR g_szCurProjectPath[MAX_PATH] = {0};
@@ -247,11 +254,25 @@ void InitGlobalVar()
     GetColorRegPorpValue(lpszKeyRoot, lpszPowerInitialColor, crInitial, RGB(255,255,255));
     GetColorRegPorpValue(lpszKeyRoot, lpszPowerFadeoutColor, crFadeout, RGB(166, 202, 240));
     GetBoolRegPorpValue(lpszKeyRoot, lpszUsePowerMode, cfg_bUsePowerMode, FALSE);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartNumMin, cfg_uPartNumMin, 5);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartNumMax, cfg_uPartNumMax, 15);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartVxMin, cfg_uPartVxMin, 1000);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartVxMax, cfg_uPartVxMax, 3000);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartVyMin, cfg_uPartVyMin, 2000);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartVyMax, cfg_uPartVyMax, 4000);
+    GetIntegerRegPorpValue(lpszKeyRoot, lpszPartGravity, cfg_uPartGravity, 85);
 
     CPowerModeConfig *pmCfg = GlobalPowerModeConfig();
     pmCfg->SetInitialColor(crInitial);
     pmCfg->SetFadeoutColor(crFadeout);
     pmCfg->SetColorMode(powerColorMode);
+    pmCfg->SetMinParticles(cfg_uPartNumMin);
+    pmCfg->SetMaxParticles(cfg_uPartNumMax);
+    pmCfg->SetVxMin(double(cfg_uPartVxMin) / 1000.0 - 2.0);
+    pmCfg->SetVxMax(double(cfg_uPartVxMax) / 1000.0 - 2.0);
+    pmCfg->SetVyMin(double(cfg_uPartVyMin) / 1000.0 - 5.0);
+    pmCfg->SetVyMax(double(cfg_uPartVyMax) / 1000.0 - 5.0);
+    pmCfg->SetGravity(double(cfg_uPartGravity) / 1000.0);
 }
 
 BOOL SetWindowsAutoRunKey(BOOL bEnable)
@@ -318,6 +339,7 @@ BOOL SIOpenFile(LPCTSTR lpszSiProgram, LPCTSTR lpszFileName)
 }
 
 LPCTSTR lpszPathsPath = _T("SOFTWARE\\Source Dynamics\\Source Insight\\3.0\\Paths");
+LPCTSTR lpszPathsPath4 = _T("SOFTWARE\\Source Dynamics\\Source Insight\\4.0\\Paths");
 LPCTSTR lpszInitDir = _T("InitDir");
 LPCTSTR lpszSiProgram = _T("insight3.exe");
 

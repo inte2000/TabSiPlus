@@ -40,6 +40,13 @@ LPCTSTR lpszPowerColorMode = _T("PowerModeColorMode");
 LPCTSTR lpszPowerInitialColor = _T("PowerModeInitialColor");
 LPCTSTR lpszPowerFadeoutColor = _T("PowerModeFadeoutColor");
 LPCTSTR lpszUsePowerMode = _T("UsePowerMode");
+LPCTSTR lpszPartNumMin = _T("PartNumMin");
+LPCTSTR lpszPartNumMax = _T("PartNumMax");
+LPCTSTR lpszPartVxMin = _T("PartVxMin");
+LPCTSTR lpszPartVxMax = _T("PartVxMax");
+LPCTSTR lpszPartVyMin = _T("PartVyMin");
+LPCTSTR lpszPartVyMax = _T("PartVyMax");
+LPCTSTR lpszPartGravity = _T("PartGravity");
 
 static HKEY s_hRootKey = HKEY_CURRENT_USER;
 

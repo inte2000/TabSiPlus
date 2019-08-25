@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ColourPicker.h"
+#include "RangeSliderCtrl.h"
 
 // CPowerModePage dialog
 
@@ -27,6 +28,7 @@ protected:
     afx_msg LONG OnColorPickerSelChange(UINT lParam, LONG wParam);
     afx_msg LONG OnColorPickerCloseUp(UINT lParam, LONG wParam);
     afx_msg LONG OnColorPickerDropDown(UINT lParam, LONG wParam);
+	afx_msg LRESULT OnRangeValueChange(WPARAM wParam, LPARAM lParam);
 
 	DECLARE_MESSAGE_MAP()
 
@@ -37,4 +39,7 @@ protected:
     COLORREF         m_crFadeout;
     int              m_colorMode;
     int              m_iUsePowerMode;
+    CRangeSliderCtrl m_PartCountRange;
+    CRangeSliderCtrl m_PartVxRange;
+    CRangeSliderCtrl m_PartVyRange;
 };

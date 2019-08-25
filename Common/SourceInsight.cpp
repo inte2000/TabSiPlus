@@ -9,6 +9,7 @@ LPCTSTR splashWndClassName = _T("TabSiSplashClass");
 
 LPCTSTR sourceInsightTitle = _T("Source Insight");
 LPCTSTR lpszSiFrameWndClass = _T("si_Frame");
+LPCTSTR lpszSi4FrameWndClass = _T("si4_Frame");
 LPCTSTR lpszChindFrameWndClass = _T("si_Sw");
 LPCTSTR lpszMdiClientWndClass = _T("MDIClient");
 
@@ -28,9 +29,9 @@ BOOL IsSourceInsightFrameWnd(HWND hWnd)
     if(nRtn == 0)
         return FALSE;
 
-    //windows class name is "si_Frame" and title has "Source  Insight", 
+    //windows class name is "si_Frame" (si4_Frame for 4.x)and title has "Source  Insight", 
     //It can be determined that this is a source insight window
-    if((lstrcmp(lpszSiFrameWndClass,szClassName) == 0) 
+    if( ((lstrcmp(lpszSiFrameWndClass,szClassName) == 0) || (lstrcmp(lpszSi4FrameWndClass,szClassName) == 0))
         && (StrStr(szTitle, sourceInsightTitle) != NULL))
     {
         if(StrStr(szTitle,lpszTextMark) != NULL)//There is a hook mark, do not harass this window again

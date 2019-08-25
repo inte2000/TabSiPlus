@@ -39,6 +39,13 @@ extern LPCTSTR lpszPowerColorMode;
 extern LPCTSTR lpszPowerInitialColor;
 extern LPCTSTR lpszPowerFadeoutColor;
 extern LPCTSTR lpszUsePowerMode;
+extern LPCTSTR lpszPartNumMin;
+extern LPCTSTR lpszPartNumMax;
+extern LPCTSTR lpszPartVxMin;
+extern LPCTSTR lpszPartVxMax;
+extern LPCTSTR lpszPartVyMin;
+extern LPCTSTR lpszPartVyMax;
+extern LPCTSTR lpszPartGravity;
 
 void SetRegistryRootKey(HKEY hRootKey);
 

@@ -48,6 +48,13 @@ extern int cfg_iLeftBarWidth;
 extern BOOL cfg_bSmartFlip;
 
 extern BOOL cfg_bUsePowerMode;
+extern int cfg_uPartNumMin;
+extern int cfg_uPartNumMax;
+extern int cfg_uPartVxMin; //ÐÞÕý 2000
+extern int cfg_uPartVxMax;
+extern int cfg_uPartVyMin; //ÐÞÕý 5000
+extern int cfg_uPartVyMax;
+extern int cfg_uPartGravity;
 
 extern HINSTANCE g_TSuppDll;
 extern LPCTSTR lpszTSuppDll;

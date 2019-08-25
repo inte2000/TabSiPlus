@@ -78,6 +78,10 @@
 #define IDD_PROPPAGE_POWERMODE          1031
 #define IDC_EDIT_ACCELERATION           1031
 #define IDC_CHK_USE_POWERMODE           1032
+#define IDC_PARTNUM_RANGE_CTRL          1033
+#define IDC_VX_RANGE_CTRL               1034
+#define IDC_VX_RANGE_CTRL2              1035
+#define IDC_VY_RANGE_CTRL               1036
 #define IDS_TECH_SUPPORT                32771
 #define IDS_FAIL_OPEN_HELP              32772
 #define IDS_OPTION_SHEET_TITLE          32773
@@ -121,9 +125,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        1032
+#define _APS_NEXT_RESOURCE_VALUE        141
 #define _APS_NEXT_COMMAND_VALUE         32811
-#define _APS_NEXT_CONTROL_VALUE         1033
+#define _APS_NEXT_CONTROL_VALUE         1037
 #define _APS_NEXT_SYMED_VALUE           1000
 #endif
 #endif

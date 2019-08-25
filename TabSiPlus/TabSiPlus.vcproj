@@ -917,6 +917,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\RangeSliderCtrl.cpp"
+				>
+			</File>
+			<File
 				RelativePath="SelectFolderDlg.cpp"
 				>
 				<FileConfiguration
@@ -1471,6 +1475,10 @@
 			</File>
 			<File
 				RelativePath=".\PowerModePage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\RangeSliderCtrl.h"
 				>
 			</File>
 			<File

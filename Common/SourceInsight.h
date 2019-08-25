@@ -7,6 +7,7 @@ extern LPCTSTR splashWndClassName;
 
 extern LPCTSTR sourceInsightTitle;
 extern LPCTSTR lpszSiFrameWndClass;
+extern LPCTSTR lpszSi4FrameWndClass;
 extern LPCTSTR lpszChindFrameWndClass;
 extern LPCTSTR lpszMdiClientWndClass;
 

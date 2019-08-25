@@ -1,3 +1,9 @@
+[2619]
+New : 解决power mode闪烁问题，增加粒子的参数设置选项
+New : 支持Source Insight 4
+Fixed : Source Insight 退出时的资源泄露问题
+Fixed : Source Insight 退出时程序异常错误
+
 [1928]
 New : 增加tab标签颜色和主题制作工具tabtest.exe的源代码
 New : 新增atom等工具上流行的power mode

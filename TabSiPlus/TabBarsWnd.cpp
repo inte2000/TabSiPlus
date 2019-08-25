@@ -92,6 +92,11 @@ CTabBarsWnd::CTabBarsWnd()
 
 CTabBarsWnd::~CTabBarsWnd()
 {
+    if(m_pTabTheme != NULL)
+    {
+        m_pTabTheme->ReleaseConfig();
+        delete m_pTabTheme;
+    }
 }
 
 void CTabBarsWnd::MoveTabCtrl(LPRECT pTabClient)
@@ -685,13 +690,13 @@ void CTabBarsWnd::OnDestroy()
 
     m_TabCtrl.SetNotifyWnd(NULL);
     m_TabCtrl.DestroyWindow();
-    
+/*    
     if(m_pTabTheme != NULL)
     {
         m_pTabTheme->ReleaseConfig();
         delete m_pTabTheme;
     }
-
+*/
     m_TabImgList.Detach();
     ImageList_Destroy(m_TabImages);
 

@@ -208,6 +208,8 @@ BOOL CTabSiPlusApp::InitInstance()
 
 int CTabSiPlusApp::ExitInstance()
 {
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
     DebugTracing(gnDbgLevelNormalDebug,_T("CTabSiPlusApp::ExitInstance(bInitialized = %d) Start"),bInitialized);
 
     if(bInitialized)

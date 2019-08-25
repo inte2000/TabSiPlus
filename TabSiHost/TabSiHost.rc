@@ -35,7 +35,7 @@ BEGIN
     IDS_GETMODULEFILNAME_ERROR "函数GetModuleFileName()调用失败"
     IDS_COMMANDLINE_HELP    "命令行用法:\n\tTabSiHook.exe\t- 启动 Source Insight TabSi Extension\n\tTabSiHook.exe /?\t- 显示帮助\n\tTabSiHook.exe /u\t- 中止Source Insight TabSi Extension\n\tTabSiHook.exe /r\t- 重新启动Source Insight TabSi Extension"
     IDS_SOFTVERNAME         "TabSi Plus For Source Insight 3.x"
-    IDS_COPYRIGHT           "Inte2000 (C) 版权所有 2006"
+    IDS_COPYRIGHT           "Inte2000 (C) 版权所有 2019"
     IDS_WEBURL              "http://blog.csdn.net/orbit/"
 END
 
@@ -102,7 +102,7 @@ BEGIN
     IDS_GETMODULEFILNAME_ERROR "Function GetModuleFileName() failed"
     IDS_COMMANDLINE_HELP    "Command line usage:\n\tTabSiHook.exe\t- start Source Insight Extension monitor\n\tTabSiHook.exe /?\t- display this help\n\tTabSiHook.exe /u\t- stop Source Insight Extension monitor\n\tTabSiHook.exe /r\t- restart Source Insight Extension monitor"
     IDS_SOFTVERNAME         "TabSi Plus For Source Insight 3.x"
-    IDS_COPYRIGHT           "Copyright 2006 (C) by Inte2000"
+    IDS_COPYRIGHT           "Copyright 2019 (C) by Inte2000"
     IDS_WEBURL              "http://blog.csdn.net/orbit/"
 END
 

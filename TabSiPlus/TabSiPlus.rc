@@ -104,8 +104,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,99,3,1928
- PRODUCTVERSION 0,99,3,1928
+ FILEVERSION 0,99,5,2619
+ PRODUCTVERSION 0,99,5,2619
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x9L
@@ -123,13 +123,13 @@ BEGIN
             VALUE "Comments", "Source Dynamics 可能不喜欢这个程序"
             VALUE "CompanyName", "Orbit Studio"
             VALUE "FileDescription", "TabSiPlus DLL"
-            VALUE "FileVersion", "0, 99, 3, 1928"
+            VALUE "FileVersion", "0, 99, 5, 2619"
             VALUE "InternalName", "水玉石"
-            VALUE "LegalCopyright", "版权所有 (C) 2012 Orbit Studio"
+            VALUE "LegalCopyright", "版权所有 (C) 2019 Orbit Studio"
             VALUE "OriginalFilename", "TabSiPlus.DLL"
-            VALUE "PrivateBuild", "1928"
+            VALUE "PrivateBuild", "2619"
             VALUE "ProductName", "Source Insight外挂程序"
-            VALUE "ProductVersion", "0, 99, 3, 1928"
+            VALUE "ProductVersion", "0, 99, 5, 2619"
         END
     END
     BLOCK "VarFileInfo"
@@ -324,26 +324,26 @@ CAPTION "Power Mode"
 FONT 9, "宋体", 0, 0, 0x1
 BEGIN
     LTEXT           "微粒数量范围：",IDC_STATIC,7,23,57,8
-    LTEXT           "水平初速度范围：",IDC_STATIC,7,39,65,8
-    LTEXT           "垂直初速度范围：",IDC_STATIC,7,58,65,8
-    LTEXT           "加速度：",IDC_STATIC,7,76,33,8
+    LTEXT           "水平初速度范围：",IDC_STATIC,7,41,65,8
+    LTEXT           "垂直初速度范围：",IDC_STATIC,7,61,65,8
+    LTEXT           "加速度：",IDC_STATIC,7,79,33,8
     GROUPBOX        "初始颜色",IDC_STATIC,7,96,127,68
     GROUPBOX        "消隐颜色",IDC_STATIC,147,96,127,68
     CONTROL         "使用随机颜色",IDC_RAD_RANDOM_COLOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,110,64,10
     CONTROL         "使用静态颜色",IDC_RAD_STATIC_COLOR,"Button",BS_AUTORADIOBUTTON,16,125,64,10
-    EDITTEXT        IDC_EDIT_PARTICLE_MIN,77,21,79,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_PARTICLE_MAX,187,21,79,14,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,160,24,21,8
-    EDITTEXT        IDC_EDIT_VX_MIN,77,38,79,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_VX_MAX,187,38,79,14,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,160,40,21,8
-    EDITTEXT        IDC_EDIT_VY_MIN,77,55,79,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_VY_MAX,187,55,79,14,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,161,57,21,8
-    EDITTEXT        IDC_EDIT_ACCELERATION,77,72,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARTICLE_MIN,77,21,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_PARTICLE_MAX,243,21,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VX_MIN,77,40,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VX_MAX,243,40,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VY_MIN,77,58,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VY_MAX,243,58,30,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_ACCELERATION,77,75,60,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
     PUSHBUTTON      "初始颜色",IDC_COLORPICKER_INITIAL,30,141,88,17
     PUSHBUTTON      "消隐颜色",IDC_COLORPICKER_FADEOUT,167,141,88,17
     CONTROL         "启用代码窗口的Power Mode效果",IDC_CHK_USE_POWERMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,4,128,10
+    CONTROL         "",IDC_PARTNUM_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,112,20,125,15
+    CONTROL         "",IDC_VX_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,112,38,125,15
+    CONTROL         "",IDC_VY_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,112,56,125,15
 END
 
 
@@ -419,7 +419,6 @@ BEGIN
     IDS_TOO_MUCH_FLIP_PATH  "当前搜索路径太多(多于64个), 请删除一些不再使用的搜索路径.\r\n(搜索路径太多会减慢搜索速度)"
     IDS_TOOLBAR_TT          "在C/CPP/H文件之间切换"
     IDS_INTERNAL_ERROR      "发生内部错误，TabSi 文件标签外挂将被关闭！"
-    IDS_TIME_EXPIRED        "这个软件的使用期限已过，请到\r\nHttp://blog.csdn.net/orbit/\r\n下载新的延长时间限制的版本。\r\n\r\n为什么要设置时间限制？\r\n这是一个违反了软件保护相关法律的外挂程序，它侵犯了“Source Insight”软件的完整权，在Source Dynamic公司开始抱怨之前，我不知道这个程序能够使用多长时间，为了将法律责任降到最小程度，所以做了时间限制。"
     IDS_FOLDER_ACCESS_ERROR "目录访问错误，不存在或者没有权限！"
     IDS_NO_SCC_PROVIDER     "从系统中检索Source Control Provider信息出错，请检查系统中是否正确安装Source Control软件！"
     IDS_SELECT_WORKING_BASE "选择工作代码目录"
@@ -449,8 +448,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,99,3,1928
- PRODUCTVERSION 0,99,3,1928
+ FILEVERSION 0,99,5,2619
+ PRODUCTVERSION 0,99,5,2619
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x9L
@@ -468,13 +467,13 @@ BEGIN
             VALUE "Comments", "Source Dynamics may hate this program"
             VALUE "CompanyName", "Orbit Studio"
             VALUE "FileDescription", "TabSiPlus DLL"
-            VALUE "FileVersion", "0, 99, 3, 1928"
+            VALUE "FileVersion", "0, 99, 5, 2619"
             VALUE "InternalName", "carnelian"
-            VALUE "LegalCopyright", "Copyright (C) 2006 Orbit Studio"
+            VALUE "LegalCopyright", "Copyright (C) 2019 Orbit Studio"
             VALUE "OriginalFilename", "TabSiPlus.DLL"
-            VALUE "PrivateBuild", "1928"
+            VALUE "PrivateBuild", "2619"
             VALUE "ProductName", "TabSiPlus for Source Insight"
-            VALUE "ProductVersion", "0, 99, 3, 1928"
+            VALUE "ProductVersion", "0, 99, 5, 2619"
         END
     END
     BLOCK "VarFileInfo"
@@ -675,26 +674,26 @@ CAPTION "Power Mode"
 FONT 8, "Tahoma", 0, 0, 0x1
 BEGIN
     LTEXT           "Particles Number Range :",IDC_STATIC,7,21,92,8
-    LTEXT           "Horizontal Start Velocity :",IDC_STATIC,7,35,98,8
-    LTEXT           "Vertical Start Velocity :",IDC_STATIC,7,53,100,8
-    LTEXT           "Acceleration :",IDC_STATIC,7,69,102,8
+    LTEXT           "Horizontal Start Velocity :",IDC_STATIC,7,38,98,8
+    LTEXT           "Vertical Start Velocity :",IDC_STATIC,7,57,100,8
+    LTEXT           "Acceleration :",IDC_STATIC,7,75,102,8
     GROUPBOX        "Initial Color",IDC_STATIC,7,94,127,70
     GROUPBOX        "Fadeout Color",IDC_STATIC,147,94,127,70
     CONTROL         "Use Random Color",IDC_RAD_RANDOM_COLOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,108,97,9
     CONTROL         "Use Static Color",IDC_RAD_STATIC_COLOR,"Button",BS_AUTORADIOBUTTON,16,121,87,9
-    EDITTEXT        IDC_EDIT_PARTICLE_MIN,97,19,74,13,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_PARTICLE_MAX,199,19,74,13,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,177,21,17,8
-    EDITTEXT        IDC_EDIT_VX_MIN,97,34,74,13,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_VX_MAX,199,34,74,13,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,177,36,17,8
-    EDITTEXT        IDC_EDIT_VY_MIN,97,50,74,13,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_VY_MAX,199,50,74,13,ES_AUTOHSCROLL
-    LTEXT           "-----",IDC_STATIC,177,52,17,8
-    EDITTEXT        IDC_EDIT_ACCELERATION,97,66,74,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARTICLE_MIN,97,19,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_PARTICLE_MAX,246,19,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VX_MIN,97,37,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VX_MAX,246,37,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VY_MIN,97,54,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VY_MAX,246,54,28,13,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_ACCELERATION,97,72,28,13,ES_AUTOHSCROLL
     PUSHBUTTON      "Initial Color",IDC_COLORPICKER_INITIAL,30,138,88,16
     PUSHBUTTON      "Fadeout Color",IDC_COLORPICKER_FADEOUT,163,136,88,16
     CONTROL         "Using Power Mode Effect",IDC_CHK_USE_POWERMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,4,200,9
+    CONTROL         "",IDC_PARTNUM_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,130,18,113,14
+    CONTROL         "",IDC_VX_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,130,35,113,14
+    CONTROL         "",IDC_VY_RANGE_CTRL,"MFCRangeSliderCtrl",WS_TABSTOP,130,53,113,14
 END
 
 
@@ -770,7 +769,6 @@ BEGIN
     IDS_TOO_MUCH_FLIP_PATH  "too much search path you setted(more than 64), please remove some no longer use path.\r\n(too much search path would slowed the speed of file switch)"
     IDS_TOOLBAR_TT          "C/CPP/H Files Flip"
     IDS_INTERNAL_ERROR      "Internal error occured, TabSi Plus will be shutdown!"
-    IDS_TIME_EXPIRED        "This software has expired, please visit \r\n http://www.winmsg.com to download new time extending version. \r\n\r\n Why set the time limitation? \r\nBecause this is a illegal patch(plus) program which invade the integrity of ""Source  Insight"" software, I don't know how long time people can use this program before Source Dynamic company start to complain it, so I set this limitation, just for the purpose of reducing responsibility."
     IDS_FOLDER_ACCESS_ERROR "Folder access failed, it's not existed!"
     IDS_NO_SCC_PROVIDER     "Can't find Source Control Provider information, Please reinstall your Source Control software correctly!"
     IDS_SELECT_WORKING_BASE "Select Working Project Code Base Folder"
